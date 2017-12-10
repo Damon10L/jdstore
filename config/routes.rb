@@ -23,6 +23,11 @@ Rails.application.routes.draw do
     resources :orders
   end
 
+  namespace :admin do
+    resources :products
+    resources :orders 
+  end
+
   resources :cart_items
   resources :orders do
     member do
